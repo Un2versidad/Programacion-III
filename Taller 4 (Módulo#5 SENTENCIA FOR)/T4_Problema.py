@@ -11,6 +11,6 @@ while True:
 
 # Usar un bucle for para imprimir la tabla de multiplicar
 print(f"\nTabla de multiplicar del {numero}:")
-for i in range(1, 11):  # Iterar desde 1 hasta 10 (inclusive)
+for i in range(1, 11):  # Iterar desde 1 hasta 10 (inclusivo)
     resultado = numero * i
     print(f"{numero} x {i} = {resultado}")
