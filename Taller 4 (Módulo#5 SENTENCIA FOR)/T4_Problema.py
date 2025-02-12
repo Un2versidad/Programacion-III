@@ -1,4 +1,4 @@
-# Solicitar al usuario un número entero entre 1 y 10
+# Solicitar al usuario un número entero entre 1 y 10 (Se Uso Pycharm)
 while True:
     try:
         numero = int(input("Ingrese un número entero entre 1 y 10: "))
@@ -11,6 +11,6 @@ while True:
 
 # Usar un bucle for para imprimir la tabla de multiplicar
 print(f"\nTabla de multiplicar del {numero}:")
-for i in range(1, 11):  # Iterar desde 1 hasta 10 (inclusivo)
+for i in range(1, 11):  # Iterar desde 1 hasta 10
     resultado = numero * i
     print(f"{numero} x {i} = {resultado}")
