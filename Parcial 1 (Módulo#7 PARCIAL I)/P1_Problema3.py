@@ -14,10 +14,10 @@ while True:
 
     #Condicional para determinar el precio de la entrada
     if edad < 4:
-      print("Puede entrar gratis")
+      print("Su entrada es gratis!\n")
     elif edad >= 4 and edad <= 18:
-     print("Debe pagar B/.5.00")
+     print("Debe pagar por la entrada, el costo es de B/.5.00\n")
     else:
-      print("Debe pagar B/.10.00")
+      print("Debe pagar por la entrada, el costo es de B/.10.00\n")
   except ValueError:
     print("!Por favor ingrese un valor válido!\n")
