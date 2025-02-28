@@ -11,6 +11,13 @@ precios_frutas = {
 print("Bienvenido a la Frutería Python, S.A.")
 total = 0.0
 
+# Imprimir listado de frutas y precios
+print("\n---- Lista de Productos Disponibles ----\n")
+for fruta, precio in precios_frutas.items():
+  print(f"{fruta}: B/.{precio:.2f}")
+print()
+
+# Bucle para repetir el programa
 while True:
     # Solicitar al usuario el nombre de la fruta y su peso
     fruta = input("Ingrese el nombre de la fruta (o 'salir' para terminar): ").capitalize()
@@ -30,7 +37,7 @@ while True:
         except ValueError:
             print("Por favor, ingrese un valor numérico para el peso.")
     else:
-        print(f"Lo siento, {fruta} no está disponible en nuestra tienda.")
+        print(f"Lo siento, ´{fruta}´ no está disponible en nuestra tienda.")
 
 # Mostrar el total de la compra
 print(f"\nTotal de la compra: ${total:.2f}")
