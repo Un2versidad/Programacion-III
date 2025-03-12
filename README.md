@@ -6,9 +6,7 @@ Talleres y Parciales de PROGRAMACIÓN DE COMPUTADORA III
 
 ## 💻 Programación de Computadoras III 🚀
 
-🗓️ Horas del Módulo I: 16 (12 de mayo 2021)
-
-Objetivos Específicos del Módulo:
+Objetivos:
 
 🛠️ Identificar las herramientas a utilizar para generar un programa Python.
 🐍 Comprender la definición y características de Python.
