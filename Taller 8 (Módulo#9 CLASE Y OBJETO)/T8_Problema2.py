@@ -10,7 +10,7 @@ class Empleados:
 
     def salario_neto(self):
         salario = self.sueldoBruto - (self.sueldoBruto * 0.17)
-        salario = salario - (salario * 0.005)
+        salario = salario - (salario * 0.50)
         print("Salario Neto: ", f"${salario:.2f}")
 
 empleados = Empleados()
