@@ -1,4 +1,5 @@
 # Hecho con Pycharm (Parcial 2)
+import requests
 
 class Producto:
     def __init__(self, referencia, nombre, descripcion, precio):
@@ -6,10 +7,10 @@ class Producto:
         self.nombre = nombre
         self.descripcion = descripcion
         self.precio = precio
-    
+
     def es_caro(self):
         return self.precio > 10
-    
+
     def mostrar(self):
         info = f"Referencia: {self.referencia}\nNombre: {self.nombre}\nPrecio: ${self.precio:.2f}"
         if self.descripcion:
@@ -21,7 +22,7 @@ class Alimento(Producto):
         super().__init__(referencia, nombre, descripcion, precio)
         self.productor = productor
         self.distribuidor = distribuidor
-    
+
     def mostrar(self):
         return f"{super().mostrar()}\nProductor: {self.productor}\nDistribuidor: {self.distribuidor}"
 
@@ -31,36 +32,35 @@ class Libro(Producto):
         self.nombre_autor = nombre_autor
         self.isbn = isbn
         self.distribuidor = distribuidor
-    
+
     def mostrar(self):
         return f"{super().mostrar()}\nAutor: {self.nombre_autor}\nISBN: {self.isbn}\nDistribuidor: {self.distribuidor}"
-
 
 class Medicamento(Producto):
     def __init__(self, nombre, distribuidora, precio, farmaceutica):
         super().__init__(None, nombre, None, precio)
         self.distribuidora = distribuidora
         self.farmaceutica = farmaceutica
-    
+
     def mostrar(self):
         return f"Nombre: {self.nombre}\nPrecio: ${self.precio:.2f}\nDistribuidora: {self.distribuidora}\nFarmacéutica: {self.farmaceutica}"
 
 class Inventario:
     def __init__(self):
         self.productos = []
-    
+
     def agregar(self, producto):
         self.productos.append(producto)
-    
+
     def mostrar_caros(self):
         caros = [p for p in self.productos if p.es_caro()]
         if not caros:
             print("\nNo hay productos con precio mayor a $10")
             return
-        
+
         print("\n--- PRODUCTOS CON PRECIO > $10 ---")
         for producto in caros:
-            print(f"\n{producto.mostrar()}\n" + "-"*40)
+            print(f"\n{producto.mostrar()}\n" + "-" * 40)
 
 def capturar_alimento():
     print("\nCapturar Alimento:")
@@ -93,9 +93,10 @@ def capturar_medicamento():
         farmaceutica=input("Farmacéutica: ")
     )
 
-def menu():
+def mostrar_menu():
+    print(requests.get("https://raw.githubusercontent.com/Un2versidad/Programacion-III/refs/heads/main/Parcial%202%20(M%C3%B3dulo%2312%20PARCIAL%20II)/ascii.txt").text)
     inventario = Inventario()
-    
+
     while True:
         print("\n=== SISTEMA DE INVENTARIO ===")
         print("1. Agregar Alimento")
@@ -103,9 +104,9 @@ def menu():
         print("3. Agregar Medicamento")
         print("4. Mostrar productos > $10")
         print("5. Salir")
-        
+
         opcion = input("\nSeleccione una opción: ")
-        
+
         if opcion == "1":
             inventario.agregar(capturar_alimento())
         elif opcion == "2":
@@ -120,4 +121,4 @@ def menu():
         else:
             print("\nOpción no válida. Intente nuevamente.")
 
-menu()
+mostrar_menu()
