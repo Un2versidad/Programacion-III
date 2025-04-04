@@ -1,5 +1,4 @@
 # Hecho con Pycharm (Parcial 2)
-import requests
 
 class Producto:
     def __init__(self, referencia, nombre, descripcion, precio):
@@ -94,7 +93,16 @@ def capturar_medicamento():
     )
 
 def mostrar_menu():
-    print(requests.get("https://raw.githubusercontent.com/Un2versidad/Programacion-III/refs/heads/main/Parcial%202%20(M%C3%B3dulo%2312%20PARCIAL%20II)/ascii.txt").text)
+    print("""  _____ _____ _   _ _____ __  __  ___  ____    _     ___     ___  _   _ _____ 
+ |_   _| ____| \ | | ____|  \/  |/ _ \/ ___|  | |   / _ \   / _ \| | | | ____|
+   | | |  _| |  \| |  _| | |\/| | | | \___ \  | |  | | | | | | | | | | |  _|  
+   | | | |___| |\  | |___| |  | | |_| |___) | | |__| |_| | | |_| | |_| | |___ 
+   |_| |_____|_| \_|_____|_|  |_|\___/|____/  |_____\___/   \__\_\\___/|_____|
+  _   _ _____ ____ _____ ____ ___ _____  _        ____      _                 
+ | \ | | ____/ ___| ____/ ___|_ _|_   _|/ \      / ___|    / \                
+ |  \| |  _|| |   |  _| \___ \| |  | | / _ \     \___ \   / _ \               
+ | |\  | |__| |___| |___ ___) | |  | |/ ___ \ _   ___) | / ___ \ _            
+ |_| \_|_____\____|_____|____/___| |_/_/   \_( ) |____(_)_/   \_(_)           """)
     inventario = Inventario()
 
     while True:
